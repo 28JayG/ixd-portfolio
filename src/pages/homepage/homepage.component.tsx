@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { COMPANY_DESCRIPTION } from '../../constants/strings';
-import CustomButton from '../../shared/custom-button/custom-button.component';
+import CustomButton from '../../components/shared/custom-button/custom-button.component';
 
 import './homepage.styles.scss';
 

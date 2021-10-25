@@ -6,12 +6,16 @@ import { AppRoutes } from './constants/routes';
 import HomePage from './pages/homepage/homepage.component';
 
 import './App.css';
+import TopNav from './components/navigation/top-navigation/top-nav.component';
 
 function App() {
   return (
-    <Switch>
-      <Route path={AppRoutes.HOME} exact component={HomePage} />
-    </Switch>
+    <>
+      <TopNav />
+      <Switch>
+        <Route path={AppRoutes.HOME} exact component={HomePage} />
+      </Switch>
+    </>
   );
 }
 
