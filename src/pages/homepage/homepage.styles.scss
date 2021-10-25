@@ -23,6 +23,18 @@
       $ixd_light_blue 99.38%
     );
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+
+    .ht-x-ui {
+      position: absolute;
+      top: 25%;
+      left: 0;
+    }
+    .ht-ux {
+      position: absolute;
+      transform: translate(0, -50%);
+      top: 50%;
+      right: 0;
+    }
   }
 
   .hero-title {
@@ -64,6 +76,12 @@
           bottom: -3px;
           right: -3px;
         }
+      }
+
+      .ht-cursor {
+        position: absolute;
+        bottom: -25px;
+        right: -30px;
       }
     }
   }

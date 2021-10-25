@@ -1,4 +1,4 @@
-import ixdLogo from '../../../assets/svg/ixd-logo.png';
+import ixdLogo from '../../../assets/ixd-logo.png';
 
 import './top-nav.styles.scss';
 
