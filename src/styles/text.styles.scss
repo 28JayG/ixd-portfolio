@@ -1,0 +1,55 @@
+$font-family: 'Poppins';
+
+.heading_1 {
+  font-family: $font-family;
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.heading_5 {
+  font-family: $font-family;
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.heading_6 {
+  font-family: $font-family;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.heading_6_semi_bold {
+  font-family: $font-family;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.subtitle_2 {
+  font-family: $font-family;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.body_1 {
+  font-family: $font-family;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.body_2 {
+  font-family: $font-family;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.button {
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 500;
+}
