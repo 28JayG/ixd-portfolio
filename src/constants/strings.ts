@@ -1,0 +1,1 @@
+export const COMPANY_DESCRIPTION = 'We are a full stack design  to development solution  provider, that help enterpriese build future-ready products with our research-driven approach.'

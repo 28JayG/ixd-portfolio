@@ -1,0 +1,33 @@
+@import '../../styles/text.styles.scss';
+@import '../../styles/colors.scss';
+
+.cstm-btn {
+  @extend .button;
+  width: 190px;
+  height: 60px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  margin-right: 22px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.primary {
+    color: black;
+    background-color: white;
+    border: 0;
+  }
+
+  &.secondary {
+    color: white;
+    border: 1px solid;
+    background-color: transparent;
+  }
+
+  &.gradient {
+    color: white;
+    border: 0;
+    background: linear-gradient(100.5deg, #538ee8 14.21%, #21c1e5 90.39%);
+  }
+}
