@@ -1,0 +1,29 @@
+@import '../../../styles/colors.scss';
+
+.ixd-hero-bg {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  width: 100vw;
+  height: 800px;
+  background-image: linear-gradient(
+    73.14deg,
+    $ixd_dark_blue 2.84%,
+    $ixd_light_blue 99.38%
+  );
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+
+  .ht-x-ui {
+    position: absolute;
+    top: 25%;
+    left: 0;
+  }
+  .ht-ux {
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 50%;
+    right: 0;
+  }
+}

@@ -1,0 +1,69 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/text.styles.scss';
+
+.ixd-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+
+  .hero-title {
+    z-index: 1;
+    @extend .heading_1;
+    color: white;
+    text-align: center;
+    margin-bottom: 25px;
+
+    .ht-border {
+      position: relative;
+      display: inline-block;
+      border: 0.75px dashed;
+      padding: 0 24px;
+      background-color: rgba($color: #eee, $alpha: 0.15);
+
+      .corner {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: white;
+
+        &:nth-child(1) {
+          top: -3px;
+          left: -3px;
+        }
+
+        &:nth-child(2) {
+          top: -3px;
+          right: -3px;
+        }
+
+        &:nth-child(3) {
+          bottom: -3px;
+          left: -3px;
+        }
+
+        &:nth-child(4) {
+          bottom: -3px;
+          right: -3px;
+        }
+      }
+
+      .ht-cursor {
+        position: absolute;
+        bottom: -25px;
+        right: -30px;
+      }
+    }
+  }
+
+  .hero-description {
+    z-index: 1;
+    @extend .subtitle;
+    color: white;
+    text-align: center;
+    max-width: 650px;
+    margin-bottom: 45px;
+  }
+}
