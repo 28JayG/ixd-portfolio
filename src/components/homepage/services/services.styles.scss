@@ -1,6 +1,4 @@
 @import '../../../styles/common.scss';
-@import '../../../styles/colors.scss';
-
 $icon_size: 94px;
 
 .ss-wrapper {
@@ -9,22 +7,8 @@ $icon_size: 94px;
 
   .ss-cards-row {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     padding-top: 70px;
-
-    .service-card {
-      position: relative;
-      width: 100%;
-      max-width: 390px;
-      padding: 40px;
-
-      .sc-icon {
-        width: $icon_size;
-        height: $icon_size;
-        font-size: 45px;
-        color: #6595f7;
-      }
-    }
   }
 }
