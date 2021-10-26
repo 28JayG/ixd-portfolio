@@ -1,0 +1,11 @@
+@import '../../../styles/text.styles.scss';
+@import '../../../styles/colors.scss';
+
+.gt {
+  @extend .heading_5;
+  text-align: center;
+  background: -webkit-linear-gradient($ixd_dark_blue, $ixd_light_blue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

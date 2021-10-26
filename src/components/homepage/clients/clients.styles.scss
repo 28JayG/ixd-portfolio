@@ -1,0 +1,23 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/text.styles.scss';
+@import '../../../styles/common.scss';
+
+.cs-wrapper {
+  padding-top: 160px;
+  @extend .max-width-wrapper;
+
+  .clinets-wrapper {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .cs-client {
+      margin-right: 60px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

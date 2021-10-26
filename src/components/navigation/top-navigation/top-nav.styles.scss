@@ -1,7 +1,8 @@
 @import '../../../styles/text.styles.scss';
+@import '../../../styles/common.scss';
 
 .tn-wrapper {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
@@ -13,9 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    max-width: 1240px;
-    margin: 0 auto;
+    @extend .max-width-wrapper;
 
     .brand-logo {
       width: 80px;

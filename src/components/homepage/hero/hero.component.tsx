@@ -1,9 +1,12 @@
 import { COMPANY_DESCRIPTION } from '../../../constants/strings';
 
+import { Link } from 'react-router-dom';
 import HeroBackground from '../../shared/hero-bg/hero-bg.component';
 import CustomButton from '../../shared/custom-button/custom-button.component';
 
+import { AppRoutes } from '../../../constants/routes';
 import cursor from '../../../assets/cursor.png';
+
 import './hero.styles.scss';
 
 const Hero = () => (
@@ -27,7 +30,9 @@ const Hero = () => (
 
     <div style={{ zIndex: 1 }}>
       <CustomButton type='secondary'>See Our Portfolio</CustomButton>
-      <CustomButton>Become our client</CustomButton>
+      <Link to={AppRoutes.CONTACT_US}>
+        <CustomButton>Become our client</CustomButton>
+      </Link>
     </div>
   </section>
 );
