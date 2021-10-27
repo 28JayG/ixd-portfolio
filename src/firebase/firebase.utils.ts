@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { connectFirestoreEmulator, getFirestore } from '@firebase/firestore';
+import { connectFirestoreEmulator, getFirestore } from 'firebase/firestore';
 import { connectFunctionsEmulator, getFunctions } from 'firebase/functions';
 
 const firebaseConfig = {
@@ -13,10 +13,8 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-export const firestore = getFirestore();
+export const firestore = getFirestore(app);
 export const cloudFucntions = getFunctions(app);
 
-if (process.env.NODE_ENV === 'development') {
-  connectFirestoreEmulator(firestore, 'localhost', 6001);
-  connectFunctionsEmulator(cloudFucntions, 'localhost', 5001);
-}
+// connectFirestoreEmulator(firestore, 'localhost', 6001);
+// connectFunctionsEmulator(cloudFucntions, 'localhost', 5001);

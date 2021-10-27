@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+import CTABanner from '../../components/cta-banner/cta-banner.component';
 import Clients from '../../components/homepage/clients/clients.component';
 import Hero from '../../components/homepage/hero/hero.component';
 import Services from '../../components/homepage/services/services.component';
@@ -14,6 +15,7 @@ const HomePage: FC = () => {
       <Clients />
       <Services />
       <Works />
+      <CTABanner />
     </>
   );
 };

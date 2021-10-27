@@ -6,7 +6,5 @@ export const convertHexToRGB = (string) => {
     parseInt(hexArray[2], 16),
   ];
 
-  console.log(rgbArray);
-
   return rgbArray;
 };
