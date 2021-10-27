@@ -9,9 +9,9 @@ import { firestore } from '../../firebase/firebase.utils';
      4) return it
   */
 
-export const fetchWorksFromFirebase = async () => {
-  const worksCollectionRef = collection(firestore, 'works');
-  const snapshot = await getDocs(worksCollectionRef);
+export const fetchClientsFromFirebase = async () => {
+  const clientsRef = collection(firestore, 'clients');
+  const querySnapshot = await getDocs(clientsRef);
 
-  return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+  return querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 };

@@ -1,12 +1,17 @@
-import { createContext, FC, useEffect, useState } from 'react';
+import { createContext, FC, useContext, useEffect, useState } from 'react';
+
 import { WorkModal } from '../../modals/work.modal';
 import { fetchWorksFromFirebase } from './works.utils';
 
-export const ServicesContext = createContext<{
+export const WorksContext = createContext<{
   loading: boolean;
   toggleLoading: (value: boolean) => void;
   works: WorkModal[];
-} | null>(null);
+}>({
+  loading: false,
+  toggleLoading: (value: boolean) => {},
+  works: [],
+});
 
 const WorkProvider: FC = ({ children }) => {
   const [works, setWorks] = useState<Array<WorkModal>>([]);
@@ -34,10 +39,12 @@ const WorkProvider: FC = ({ children }) => {
   }, []);
 
   return (
-    <ServicesContext.Provider value={{ works: works, loading, toggleLoading }}>
+    <WorksContext.Provider value={{ works: works, loading, toggleLoading }}>
       {children}
-    </ServicesContext.Provider>
+    </WorksContext.Provider>
   );
 };
 
 export default WorkProvider;
+
+export const useWorksContext = () => useContext(WorksContext);
