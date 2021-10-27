@@ -1,0 +1,12 @@
+@import '../../../styles/common.scss';
+
+.w-wrapper {
+  @extend .max-width-wrapper;
+
+  .works-grid {
+    display: grid;
+    padding-top: 70px;
+    grid-template-columns: 1fr;
+    row-gap: 100px;
+  }
+}
