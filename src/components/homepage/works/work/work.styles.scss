@@ -1,3 +1,6 @@
+@import '../../../../styles/text.styles.scss';
+@import '../../../../styles/colors.scss';
+
 .work-row {
   display: flex;
   align-items: center;
@@ -9,7 +12,7 @@
   }
 
   .wr-img-wrapper {
-    flex-basis: 55%;
+    flex-basis: 50%;
 
     .wr-img {
       width: 100%;
@@ -20,5 +23,21 @@
 
   .wr-details {
     flex-basis: 45%;
+
+    .wr-heading {
+      @extend .heading_6_semi_bold;
+      color: #0f1e24;
+    }
+
+    .wr-type {
+      @extend .subtitle;
+      color: #c4c4c4;
+    }
+
+    .wr-descripton {
+      padding-top: 20px;
+      @extend .subtitle;
+      color: #565656;
+    }
   }
 }

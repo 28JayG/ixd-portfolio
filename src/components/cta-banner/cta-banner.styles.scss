@@ -2,66 +2,71 @@
 @import '../../styles/common.scss';
 @import '../../styles/text.styles.scss';
 
-.ctab-wrapper {
+.cta-section {
   @extend .max-width-wrapper;
-  position: relative;
-  margin-top: 230px;
-  margin-bottom: 160px;
-  height: 380px;
-  padding: 45px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  background: linear-gradient(
-    73.14deg,
-    $ixd_dark_blue 2.84%,
-    $ixd_light_blue 99.38%
-  );
-  border-radius: 45px;
+  padding-top: 230px;
+  padding-bottom: 160px;
 
-  .cta-column {
-    width: 50%;
-    min-width: 50%;
-    color: white;
-
-    .cta-head {
-      @extend .heading_5;
-      text-align: left;
-    }
-
-    .cta-text {
-      @extend .subtitle;
-      text-align: left;
-      margin-top: 20px;
-      margin-bottom: 25px;
-    }
-  }
-
-  .cta-img-wrapper {
-    position: absolute;
+  .ctab-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
     height: 420px;
-    right: 60px;
-    top: -90px;
+    padding: 45px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: linear-gradient(
+      73.14deg,
+      $ixd_dark_blue 2.84%,
+      $ixd_light_blue 99.38%
+    );
+    border-radius: 45px;
 
-    .img-ellipse {
-      position: absolute;
-      width: 306px;
-      height: 20px;
-      transform: translate(-50%, 0);
-      left: 50%;
-      bottom: -50px;
+    .cta-column {
+      width: 50%;
+      min-width: 50%;
+      color: white;
 
-      background: radial-gradient(
-        50% 50% at 50% 50%,
-        rgba(20, 17, 17, 0.2) 0%,
-        rgba(38, 33, 33, 0) 100%
-      );
+      .cta-head {
+        @extend .heading_5;
+        text-align: left;
+      }
+
+      .cta-text {
+        @extend .subtitle;
+        text-align: left;
+        margin-top: 20px;
+        margin-bottom: 25px;
+      }
     }
 
-    .cta-img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+    .cta-img-wrapper {
+      position: absolute;
+      height: 420px;
+      right: 60px;
+      top: -90px;
+
+      .img-ellipse {
+        position: absolute;
+        width: 306px;
+        height: 20px;
+        transform: translate(-50%, 0);
+        left: 50%;
+        bottom: -50px;
+
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(20, 17, 17, 0.2) 0%,
+          rgba(38, 33, 33, 0) 100%
+        );
+      }
+
+      .cta-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
   }
 }
