@@ -13,7 +13,13 @@ const Clients = () => {
       <div className='clinets-wrapper'>
         {!loading &&
           clients.map((client) => (
-            <div className='cs-client' key={client.id}></div>
+            <div className='cs-client' key={client.id}>
+              <img
+                src={client.imageUrl}
+                alt={client.name}
+                className='cs-client-img'
+              />
+            </div>
           ))}
       </div>
     </section>

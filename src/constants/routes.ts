@@ -1,6 +1,8 @@
 export const AppRoutes = {
   HOME: '/',
   CONTACT_US: '/contact-us',
+  SERVICES_SECTION: '#services-section',
+  PORTFOLIO_SECTION: '#portfolio-section',
 };
 
 export const ExternalLinks = {

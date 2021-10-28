@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import ixdLogo from '../../../assets/ixd-logo.png';
+import { AppRoutes } from '../../../constants/routes';
 
 import './top-nav.styles.scss';
 
@@ -15,9 +17,15 @@ const TopNav = () => {
         </div>
 
         <ul className='tn-links'>
-          <li>Services</li>
-          <li>Portfolio</li>
-          <li>Contact Us</li>
+          <li>
+            <a href={AppRoutes.SERVICES_SECTION}>Services</a>
+          </li>
+          <li>
+            <a href={AppRoutes.PORTFOLIO_SECTION}>Portfolio</a>
+          </li>
+          <li>
+            <Link to={AppRoutes.CONTACT_US}>Contact Us</Link>
+          </li>
         </ul>
       </div>
     </nav>

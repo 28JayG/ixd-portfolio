@@ -15,6 +15,7 @@ function App() {
         <TopNav />
         <Switch>
           <Route path={AppRoutes.HOME} exact component={HomePage} />
+          <Route path={AppRoutes.CONTACT_US} exact component={HomePage} />
         </Switch>
       </div>
       <Footer />

@@ -81,11 +81,19 @@ $ixd_logo_height: 41px;
             &:last-child {
               padding-bottom: 0;
             }
+
+            .contact {
+              display: flex;
+              align-items: center;
+
+              .icon {
+                height: 18px;
+                padding-right: 5px;
+              }
+            }
           }
         }
       }
     }
   }
-
- 
 }

@@ -1,8 +1,10 @@
 import { COMPANY_DESCRIPTION } from '../../constants/strings';
 import ixdLogoBlue from '../../assets/ixd-logo-blue.png';
 
-import './footer.styles.scss';
 import SocialsRow from './socials-row/socials-row.component';
+import { IconMail, IconPhoneCall } from '@tabler/icons';
+
+import './footer.styles.scss';
 
 const Footer = () => (
   <section className='footer-wrapper'>
@@ -38,13 +40,22 @@ const Footer = () => (
           <h6 className='ftr-list-head'>Contact Us</h6>
           <ul className='ftr-list'>
             <li>
-              <a href='mailto:interactiondesignstudio@gmail.com'>
-                <div className='icon' /> interactiondesignstudio@gmail.com
+              <a
+                className='contact'
+                href='mailto:interactiondesignstudio@gmail.com'
+              >
+                <span className='icon'>
+                  <IconMail stroke={1} />{' '}
+                </span>
+                interactiondesignstudio@gmail.com
               </a>
             </li>
             <li>
-              <a href='tel:+91 89866 30684'>
-                <div className='icon' /> +91 89866 30684
+              <a className='contact' href='tel:+91 89866 30684'>
+                <span className='icon'>
+                  <IconPhoneCall stroke={1} />
+                </span>{' '}
+                +91 89866 30684
               </a>
             </li>
           </ul>

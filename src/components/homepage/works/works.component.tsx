@@ -4,12 +4,16 @@ import Work from './work/work.component';
 import GradientText from '../../shared/gradient-text/gradient-text.component';
 
 import './works.styles.scss';
+import { AppRoutes } from '../../../constants/routes';
 
 const Works = () => {
   const { loading, works } = useWorksContext();
 
   return (
-    <section className='w-wrapper'>
+    <section
+      id={AppRoutes.PORTFOLIO_SECTION.split('#')[1]}
+      className='w-wrapper'
+    >
       <GradientText>Our Work</GradientText>
 
       <div className='works-grid'>
