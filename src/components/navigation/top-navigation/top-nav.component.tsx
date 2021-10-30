@@ -8,13 +8,15 @@ const TopNav = () => {
   return (
     <nav className='tn-wrapper'>
       <div className='tn'>
-        <div className='brand-logo'>
-          <img
-            src={ixdLogo}
-            alt='Interaction Design Stuios'
-            className='img-logo'
-          />
-        </div>
+        <Link to={AppRoutes.HOME}>
+          <div className='brand-logo'>
+            <img
+              src={ixdLogo}
+              alt='Interaction Design Stuios'
+              className='img-logo'
+            />
+          </div>
+        </Link>
 
         <ul className='tn-links'>
           <li>

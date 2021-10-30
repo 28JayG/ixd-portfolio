@@ -1,0 +1,39 @@
+@import '../../../styles/text.styles.scss';
+@import '../../../styles/colors.scss';
+
+.fi-input-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  .fi-label {
+    @extend .subtitle_2;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .fi-input {
+    box-sizing: border-box;
+    width: 290px;
+    height: 50px;
+    padding: 0 15px;
+    @extend .subtitle;
+    border-radius: 10px;
+    background: $ixd_lighter_blue;
+    backdrop-filter: blur(47px);
+    border: 0;
+    transition: background ease-out 300ms;
+
+    &:hover {
+      background: rgba($color: $ixd_input_hover, $alpha: 0.14);
+    }
+
+    &:active,
+    &:focus {
+      background: $ixd_lighter_blue;
+      border: 1px solid $ixd_input_focus;
+      outline: none;
+    }
+  }
+}

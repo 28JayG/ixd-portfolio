@@ -5,6 +5,7 @@ import { AppRoutes } from './constants/routes';
 import HomePage from './pages/homepage/homepage.component';
 import Footer from './components/footer/footer.component';
 import TopNav from './components/navigation/top-navigation/top-nav.component';
+import ContactUs from './pages/contact-us/contact-us.component';
 
 import './App.scss';
 
@@ -15,7 +16,7 @@ function App() {
         <TopNav />
         <Switch>
           <Route path={AppRoutes.HOME} exact component={HomePage} />
-          <Route path={AppRoutes.CONTACT_US} exact component={HomePage} />
+          <Route path={AppRoutes.CONTACT_US} exact component={ContactUs} />
         </Switch>
       </div>
       <Footer />

@@ -16,5 +16,7 @@ const app = initializeApp(firebaseConfig);
 export const firestore = getFirestore(app);
 export const cloudFucntions = getFunctions(app);
 
-// connectFirestoreEmulator(firestore, 'localhost', 8080);
-// connectFunctionsEmulator(cloudFucntions, 'localhost', 5001);
+if (process.env.NODE_ENV === 'development') {
+  connectFirestoreEmulator(firestore, 'localhost', 8080);
+  connectFunctionsEmulator(cloudFucntions, 'localhost', 5001);
+}

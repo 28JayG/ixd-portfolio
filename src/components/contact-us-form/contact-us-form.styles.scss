@@ -1,0 +1,56 @@
+@import '../../styles/colors.scss';
+@import '../../styles/text.styles.scss';
+
+.cu-form {
+  padding: 50px;
+  width: min-content;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.05);
+  margin: auto;
+
+  .cuf-heading {
+    @extend .heading_5;
+    color: $ixd_medium_blue;
+    text-align: left;
+  }
+
+  .cuf-text {
+    @extend .subtitle;
+    padding-top: 15px;
+    padding-bottom: 76px;
+  }
+
+  .cu-question {
+    white-space: nowrap;
+    @extend .subtitle_2;
+    margin: 35px 0;
+
+    .cu-subtext {
+      @extend .body_2;
+      margin-left: 15px;
+
+      .cu-st-link {
+        color: $anchor_color;
+      }
+    }
+  }
+
+  .cu-input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 35px;
+  }
+
+  .cu-choices-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 25px;
+  }
+
+  .cu-submit {
+    width: 100%;
+    text-align: center;
+    margin: 74px 0 0 0;
+  }
+}

@@ -5,13 +5,13 @@ import './custom-button.styles.scss';
 type buttonType = 'primary' | 'secondary' | 'gradient';
 
 interface CustomButtonProps {
-  type?: buttonType;
+  buttonType?: buttonType;
   [x: string]: any;
 }
 
 const CustomButton: FC<CustomButtonProps> = ({
   children,
-  type = 'primary',
+  buttonType: type = 'primary',
   ...otherButtonProps
 }) => {
   return (

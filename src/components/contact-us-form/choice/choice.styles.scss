@@ -1,0 +1,42 @@
+@import '../../../styles/text.styles.scss';
+@import '../../../styles/colors.scss';
+
+$tick_size: 17px;
+
+.cu-choice {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px;
+  padding-right: 0;
+  width: 187px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: $ixd_lighter_blue;
+  cursor: pointer;
+
+  &.active,
+  &:focus {
+    border: 1px solid $ixd_input_focus;
+  }
+
+  .cuc-tick {
+    width: $tick_size;
+    height: $tick_size;
+    background-color: transparent;
+    border: 1px solid black;
+    color: transparent;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+      background-color: $ixd_input_focus;
+      border: 0px;
+      color: white;
+    }
+  }
+}

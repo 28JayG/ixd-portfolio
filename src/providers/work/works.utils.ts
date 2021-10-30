@@ -13,9 +13,5 @@ export const fetchWorksFromFirebase = async () => {
   const worksCollectionRef = collection(firestore, 'works');
   const snapshot = await getDocs(worksCollectionRef);
 
-  return snapshot.docs.map((doc) => {
-    console.log(doc.metadata);
-
-    return { id: doc.id, ...doc.data() };
-  });
+  return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 };
