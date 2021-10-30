@@ -5,12 +5,13 @@ import { AppRoutes } from '../../constants/routes';
 import { allServices } from '../../constants/services';
 import { CONTACT_US_TEXT } from '../../constants/strings';
 import { ServiceModal } from '../../modals/service.modal';
+import { FirebaseFunctions } from '../../firebase/firebase-functions.utils';
 
 import Choice from './choice/choice.component';
 import FormInput from './form-input/form-input.component';
+import CustomButton from '../shared/custom-button/custom-button.component';
 
 import './contact-us-form.styles.scss';
-import CustomButton from '../shared/custom-button/custom-button.component';
 
 const ContactUsForm: FC = () => {
   const [enquiryDetails, setDetails] = useState({
@@ -21,10 +22,20 @@ const ContactUsForm: FC = () => {
     choice: allServices[0],
   });
 
-  const handleSubmit = (evt: FormEvent) => {
+  const handleSubmit = async (evt: FormEvent) => {
     evt.preventDefault();
+    const { fullName, companyName, email, phoneNumber, choice } =
+      enquiryDetails;
+    const mailData = {
+      fullName,
+      fromEmail: email,
+      companyName,
+      projectType: choice,
+      phoneNumber,
+    };
 
-    console.log({ enquiryDetails });
+    const res = await FirebaseFunctions.sendEnquiryEmail(mailData);
+    console.log(res);
   };
 
   const handleChoiceSelect = (service: ServiceModal) =>
