@@ -2,6 +2,7 @@
 @import '../../../../styles/colors.scss';
 
 $icon_size: 95px;
+$icon_size_small: 84px;
 
 .service-card {
   position: relative;
@@ -16,6 +17,18 @@ $icon_size: 95px;
     margin-right: 0;
   }
 
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto;
+
+    &:last-child {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+  }
+
   .sc-icon {
     display: flex;
     align-items: center;
@@ -23,6 +36,11 @@ $icon_size: 95px;
     width: $icon_size;
     height: $icon_size;
     border-radius: 50%;
+
+    @media screen and (max-width: 1024px) {
+      width: $icon_size_small;
+      height: $icon_size_small;
+    }
   }
 
   .sc-title {

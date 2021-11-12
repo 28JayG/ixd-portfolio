@@ -20,7 +20,7 @@ const Hero = () => (
         <div className='corner' />
         <div className='corner' />
         <div className='corner' />
-        <img src={cursor} alt='' width='20' height='23' className='ht-cursor' />
+        <img src={cursor} alt='' className='ht-cursor' />
         Craft
       </div>
       <br /> Digital Experience
@@ -28,8 +28,9 @@ const Hero = () => (
 
     <p className='hero-description'>{COMPANY_DESCRIPTION}</p>
 
-    <div style={{ zIndex: 1 }}>
+    <div className='h-btn-row'>
       <CustomButton buttonType='secondary'>See Our Portfolio</CustomButton>
+      <div className='br-spacer'></div>
       <Link to={AppRoutes.CONTACT_US}>
         <CustomButton>Become our client</CustomButton>
       </Link>

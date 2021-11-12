@@ -17,6 +17,10 @@ $tick_size: 17px;
   cursor: pointer;
   user-select: none;
 
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+
   &.active,
   &:focus {
     border: 1px solid $ixd_input_focus;
@@ -39,5 +43,39 @@ $tick_size: 17px;
       border: 0px;
       color: white;
     }
+  }
+}
+
+.ss-choice {
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: $disabled_text;
+
+  &.ss-active {
+    color: $ixd_input_focus;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 1024px) {
+    display: flex;
+  }
+
+  .ssc-box {
+    width: 18px;
+    @extend .subtitle;
+    height: 18px;
+    border-radius: 4px;
+    border: 2px solid;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

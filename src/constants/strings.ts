@@ -9,3 +9,8 @@ export const CTA_BANNER_TEXT =
 
 export const CONTACT_US_TEXT =
   'To request a quote or want to meet up for coffee. Contact Us directly or fill out the form and we will get back to you promptly.';
+
+export const FOOTER_SERVICES_TEXT =
+  'Design Thinking | Research |User Interface | Graphics / Illustrations | Development';
+
+export const SELECT_SERVICE_TEXT = 'Select Creative Work';

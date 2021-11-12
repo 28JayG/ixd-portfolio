@@ -9,22 +9,41 @@
   box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.05);
   margin: auto;
 
+  @media screen and (max-width: 1024px) {
+    padding: 35px 15px;
+    width: 90%;
+  }
+
   .cuf-heading {
     @extend .heading_5;
     color: $ixd_medium_blue;
     text-align: left;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 35px;
+      text-align: center;
+    }
   }
 
   .cuf-text {
     @extend .subtitle;
     padding-top: 15px;
     padding-bottom: 76px;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 16px;
+      text-align: center;
+    }
   }
 
   .cu-question {
     white-space: nowrap;
     @extend .subtitle_2;
     margin: 35px 0;
+
+    @media screen and (max-width: 1024px) {
+      white-space: normal;
+    }
 
     .cu-subtext {
       @extend .body_2;
@@ -40,12 +59,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 35px;
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .cu-choices-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 25px;
+
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
   }
 
   .cu-submit {

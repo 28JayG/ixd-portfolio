@@ -7,8 +7,12 @@
   height: 60px;
   border-radius: 10px;
   text-transform: capitalize;
-  margin-right: 22px;
   cursor: pointer;
+
+  @media screen and (max-width: 1024px){
+    width: 234px;
+    height: 50px;
+  }
 
   &:last-child {
     margin-right: 0;

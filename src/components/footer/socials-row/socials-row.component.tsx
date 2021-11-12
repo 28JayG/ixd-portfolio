@@ -6,6 +6,7 @@ import {
 } from '@tabler/icons';
 
 import { CompanySocials } from '../../../constants/routes';
+
 import './socials-row.styles.scss';
 
 const SocialsRow = () => (

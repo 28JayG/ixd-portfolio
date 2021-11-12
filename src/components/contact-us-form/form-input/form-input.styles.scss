@@ -25,6 +25,10 @@
     border: 0;
     transition: background ease-out 300ms;
 
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+
     &:hover {
       background: rgba($color: $ixd_input_hover, $alpha: 0.14);
     }

@@ -33,6 +33,10 @@
       color: white;
       margin: 0;
 
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+
       li {
         cursor: pointer;
         margin-right: 30px;

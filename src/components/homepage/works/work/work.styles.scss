@@ -11,6 +11,10 @@
     flex-direction: row-reverse;
   }
 
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+
   .wr-img-wrapper {
     flex-basis: 50%;
 
@@ -23,6 +27,10 @@
 
   .wr-details {
     flex-basis: 45%;
+
+    @media screen and (max-width: 1024px) {
+      text-align: center;
+    }
 
     .wr-heading {
       @extend .heading_6_semi_bold;

@@ -4,42 +4,70 @@ $font-family: 'Poppins';
   font-family: $font-family;
   font-size: 70px;
   font-weight: 700;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 35px;
+  }
 }
 
 .heading_5 {
   font-family: $font-family;
   font-size: 45px;
   font-weight: 700;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 24px;
+  }
 }
 
 .heading_6 {
   font-family: $font-family;
   font-size: 32px;
   font-weight: 700;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+  }
 }
 
 .heading_6_semi_bold {
   font-family: $font-family;
   font-size: 32px;
   font-weight: 600;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+  }
 }
 
 .subtitle {
   font-family: $font-family;
   font-size: 16px;
   font-weight: 500;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 14px;
+  }
 }
 
 .subtitle_2 {
   font-family: $font-family;
   font-size: 14px;
   font-weight: 600;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 12px;
+  }
 }
 
 .body_1 {
   font-family: $font-family;
   font-size: 20px;
   font-weight: 500;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 16px;
+  }
 }
 
 .body_2 {

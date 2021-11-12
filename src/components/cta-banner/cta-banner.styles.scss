@@ -9,6 +9,7 @@
 
   .ctab-wrapper {
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
     position: relative;
     height: 420px;
@@ -22,6 +23,12 @@
       $ixd_light_blue 99.38%
     );
     border-radius: 45px;
+
+    @media screen and (max-width: 1024px) {
+      height: auto;
+      align-items: center;
+      flex-direction: column-reverse;
+    }
 
     .cta-column {
       width: 50%;
@@ -39,6 +46,16 @@
         margin-top: 20px;
         margin-bottom: 25px;
       }
+
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+        text-align: center;
+
+        .cta-head,
+        .cta-text {
+          text-align: center;
+        }
+      }
     }
 
     .cta-img-wrapper {
@@ -46,6 +63,14 @@
       height: 420px;
       right: 60px;
       top: -90px;
+
+      @media screen and (max-width: 1024px) {
+        position: relative;
+        height: 170px;
+        max-height: 20%;
+        right: 0;
+        margin: 0 auto;
+      }
 
       .img-ellipse {
         position: absolute;

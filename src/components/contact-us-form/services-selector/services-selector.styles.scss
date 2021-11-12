@@ -1,0 +1,39 @@
+@import '../../../styles/text.styles.scss';
+@import '../../../styles/colors.scss';
+
+.ss-container {
+  position: relative;
+  width: 100%;
+  display: none;
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+
+  .ss-btn {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    @extend .subtitle;
+    border-radius: 10px;
+    background: $ixd_lighter_blue;
+    backdrop-filter: blur(47px);
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .ss-list {
+    position: absolute;
+    z-index: 6000;
+    width: 100%;
+    padding: 20px 15px;
+    background: white;
+    margin-top: 5px;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+  }
+}

@@ -19,11 +19,31 @@
     position: absolute;
     top: 25%;
     left: 0;
+
+    @media screen and (max-width: 1024px) {
+      width: 200px;
+      top: 15%;
+    }
   }
+
   .ht-ux {
     position: absolute;
     transform: translate(0, -50%);
     top: 50%;
     right: 0;
+
+    @media screen and (max-width: 1024px) {
+      width: 160px;
+      top: 90%;
+    }
+  }
+
+  .ht-x-ui,
+  .ht-ux {
+    .ht-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
 }

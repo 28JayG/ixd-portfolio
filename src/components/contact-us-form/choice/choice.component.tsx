@@ -10,12 +10,27 @@ interface IChoice {
 
 const Choice: FC<IChoice> = ({ active = false, onSelected, children }) => {
   return (
-    <div onClick={onSelected} className={`cu-choice ${active ? 'active' : ''}`}>
-      <div className={`cuc-tick ${active ? 'active' : ''}`}>
-        <IconCheck size={15} stroke={3} />
+    <>
+      <div
+        onClick={onSelected}
+        className={`cu-choice ${active ? 'active' : ''}`}
+      >
+        <div className={`cuc-tick ${active ? 'active' : ''}`}>
+          <IconCheck size={15} stroke={3} />
+        </div>
+        {children}
       </div>
-      {children}
-    </div>
+
+      <div
+        onClick={onSelected}
+        className={`ss-choice ${active ? 'ss-active' : ''}`}
+      >
+        <div className='ssc-box'>
+          {active && <IconCheck size={16} stroke={3} />}
+        </div>
+        {children}
+      </div>
+    </>
   );
 };
 

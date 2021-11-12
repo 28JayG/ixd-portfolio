@@ -14,7 +14,7 @@ import './cta-banner.styles.scss';
 
 const CTABanner: FC = () => {
   return (
-    <section className='cta-section' >
+    <section className='cta-section'>
       <div className='ctab-wrapper'>
         <div className='cta-column'>
           <h5 className='cta-head'>

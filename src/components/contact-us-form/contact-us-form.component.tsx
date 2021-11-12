@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 import { AppRoutes } from '../../constants/routes';
 import { allServices } from '../../constants/services';
 import { CONTACT_US_TEXT } from '../../constants/strings';
+import { isChoiceSelected } from '../../utils/utils';
 import { ServiceModal } from '../../modals/service.modal';
 import { FirebaseFunctions } from '../../firebase/firebase-functions.utils';
 
 import Choice from './choice/choice.component';
 import FormInput from './form-input/form-input.component';
 import CustomButton from '../shared/custom-button/custom-button.component';
+import ServicesSelector from './services-selector/services-selector.component';
 
 import './contact-us-form.styles.scss';
 
@@ -19,13 +21,14 @@ const ContactUsForm: FC = () => {
     companyName: '',
     email: '',
     phoneNumber: '',
-    choice: allServices[0],
+    choice: [allServices[0]],
   });
 
   const handleSubmit = async (evt: FormEvent) => {
     evt.preventDefault();
     const { fullName, companyName, email, phoneNumber, choice } =
       enquiryDetails;
+    console.log({ enquiryDetails });
     const mailData = {
       fullName,
       fromEmail: email,
@@ -38,8 +41,20 @@ const ContactUsForm: FC = () => {
     console.log(res);
   };
 
-  const handleChoiceSelect = (service: ServiceModal) =>
-    setDetails((prevValues) => ({ ...prevValues, choice: service }));
+  const handleChoiceSelect = (service: ServiceModal) => {
+    if (isChoiceSelected(service, enquiryDetails.choice)) {
+      setDetails((prevValues) => ({
+        ...prevValues,
+        choice: prevValues.choice.filter((choice) => choice.id !== service.id),
+      }));
+      return;
+    }
+
+    setDetails((prevValues) => ({
+      ...prevValues,
+      choice: [...prevValues.choice, service],
+    }));
+  };
 
   const handleInput = (evt: ChangeEvent) => {
     const { id, value } = evt.target as HTMLInputElement;
@@ -85,13 +100,18 @@ const ContactUsForm: FC = () => {
           {allServices.map(({ id, name }) => (
             <Choice
               onSelected={() => handleChoiceSelect({ id, name })}
-              active={enquiryDetails.choice.id === id}
+              active={isChoiceSelected({ id, name }, enquiryDetails.choice)}
               key={id}
             >
               {name}
             </Choice>
           ))}
         </div>
+
+        <ServicesSelector
+          handleSelect={handleChoiceSelect}
+          selectedChoices={enquiryDetails.choice}
+        />
 
         <div className='cu-submit'>
           <CustomButton buttonType='gradient' type='submit'>

@@ -4,5 +4,9 @@
 
   .content-wrap {
     padding-bottom: 456px;
+
+    @media screen and (max-width: 1024px) {
+      padding-bottom: 700px;
+    }
   }
 }
