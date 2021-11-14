@@ -24,11 +24,13 @@ const ContactUsForm: FC = () => {
     choice: [allServices[0]],
   });
 
+  const [loading, setLoading] = useState<boolean>(false);
+
   const handleSubmit = async (evt: FormEvent) => {
     evt.preventDefault();
     const { fullName, companyName, email, phoneNumber, choice } =
       enquiryDetails;
-    console.log({ enquiryDetails });
+
     const mailData = {
       fullName,
       fromEmail: email,
@@ -37,8 +39,14 @@ const ContactUsForm: FC = () => {
       phoneNumber,
     };
 
-    const res = await FirebaseFunctions.sendEnquiryEmail(mailData);
-    console.log(res);
+    setLoading(true);
+    try {
+      await FirebaseFunctions.sendEnquiryEmail(mailData);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChoiceSelect = (service: ServiceModal) => {
@@ -63,7 +71,7 @@ const ContactUsForm: FC = () => {
   };
 
   return (
-    <div className='cu-form'>
+    <div className={`cu-form ${loading ? 'disabled' : ''}`}>
       <form onSubmit={handleSubmit}>
         <h5 className='cuf-heading'>Let’s Talk</h5>
         <p className='cuf-text'>{CONTACT_US_TEXT}</p>
@@ -71,18 +79,27 @@ const ContactUsForm: FC = () => {
         <div className='cu-input-grid'>
           <FormInput
             required
+            disabled={loading}
             id='fullName'
             onChange={handleInput}
             label='Full Name'
           />
           <FormInput
+            disabled={loading}
             required
             id={'companyName'}
             onChange={handleInput}
             label='Company Name'
           />
-          <FormInput required id='email' onChange={handleInput} label='Email' />
           <FormInput
+            disabled={loading}
+            required
+            id='email'
+            onChange={handleInput}
+            label='Email'
+          />
+          <FormInput
+            disabled={loading}
             required
             id='phoneNumber'
             onChange={handleInput}
@@ -121,7 +138,7 @@ const ContactUsForm: FC = () => {
         />
 
         <div className='cu-submit'>
-          <CustomButton buttonType='gradient' type='submit'>
+          <CustomButton disabled={loading} buttonType='gradient' type='submit'>
             submit
           </CustomButton>
         </div>
