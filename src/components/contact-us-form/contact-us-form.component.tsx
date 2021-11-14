@@ -69,14 +69,21 @@ const ContactUsForm: FC = () => {
         <p className='cuf-text'>{CONTACT_US_TEXT}</p>
 
         <div className='cu-input-grid'>
-          <FormInput id='fullName' onChange={handleInput} label='Full Name' />
           <FormInput
+            required
+            id='fullName'
+            onChange={handleInput}
+            label='Full Name'
+          />
+          <FormInput
+            required
             id={'companyName'}
             onChange={handleInput}
             label='Company Name'
           />
-          <FormInput id='email' onChange={handleInput} label='Email' />
+          <FormInput required id='email' onChange={handleInput} label='Email' />
           <FormInput
+            required
             id='phoneNumber'
             onChange={handleInput}
             label='Phone Number'
