@@ -21,7 +21,7 @@
   }
 
   &.primary {
-    color: black;
+    color: $ixd_black;
     background-color: white;
     border: 0;
     transform: translateY(0);
@@ -59,7 +59,7 @@
     }
 
     &:hover {
-      color: black;
+      color: $ixd_black;
       border-color: white;
 
       &::before {

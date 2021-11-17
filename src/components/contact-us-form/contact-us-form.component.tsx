@@ -111,12 +111,12 @@ const ContactUsForm: FC = () => {
           What kind of creative work do you need help with?
           <span className='cu-subtext'>
             See our{' '}
-            <Link
+            <a
               className='cu-st-link'
-              to={`${AppRoutes.HOME}${AppRoutes.SERVICES_SECTION}`}
+              href={`${AppRoutes.HOME}${AppRoutes.SERVICES_SECTION}`}
             >
               services
-            </Link>
+            </a>
           </span>
         </p>
 

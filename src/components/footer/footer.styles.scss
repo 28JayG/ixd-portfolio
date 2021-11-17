@@ -94,6 +94,14 @@ $ixd_logo_height: 41px;
           margin-bottom: 20px;
         }
 
+        .ftr-p {
+          display: none;
+
+          @media screen and (max-width: 1024px) {
+            display: block;
+          }
+        }
+
         .ftr-list {
           list-style: none;
           @extend .body_2;
@@ -103,14 +111,6 @@ $ixd_logo_height: 41px;
           &.ftr-services {
             @media screen and (max-width: 1024px) {
               display: none;
-            }
-          }
-
-          .ftr-p {
-            display: none;
-
-            @media screen and (max-width: 1024px) {
-              display: block;
             }
           }
 

@@ -20,10 +20,14 @@ const TopNav = () => {
 
         <ul className='tn-links'>
           <li>
-            <a href={AppRoutes.SERVICES_SECTION}>Services</a>
+            <a href={`${AppRoutes.HOME}${AppRoutes.SERVICES_SECTION}`}>
+              Services
+            </a>
           </li>
           <li>
-            <a href={AppRoutes.PORTFOLIO_SECTION}>Portfolio</a>
+            <a href={`${AppRoutes.HOME}${AppRoutes.PORTFOLIO_SECTION}`}>
+              Portfolio
+            </a>
           </li>
           <li>
             <Link to={AppRoutes.CONTACT_US}>Contact Us</Link>
