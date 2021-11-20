@@ -1,0 +1,35 @@
+[debug] [2021-11-20T09:36:35.154Z] ----------------------------------------------------------------------
+[debug] [2021-11-20T09:36:35.156Z] Command:       /usr/local/bin/firebase /home/oldchocolate/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2021-11-20T09:36:35.156Z] CLI Version:   9.20.0
+[debug] [2021-11-20T09:36:35.156Z] Platform:      linux
+[debug] [2021-11-20T09:36:35.157Z] Node Version:  v12.18.1
+[debug] [2021-11-20T09:36:35.157Z] Time:          Sat Nov 20 2021 15:06:35 GMT+0530 (India Standard Time)
+[debug] [2021-11-20T09:36:35.157Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-20T09:36:35.203Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-20T09:36:35.203Z] > authorizing via signed-in user (jay.crijay.gandhi@gmail.com)
+[debug] [2021-11-20T09:36:35.203Z] [iam] checking project ixd-studios for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-11-20T09:36:35.205Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-20T09:36:35.205Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-20T09:36:36.775Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Sat, 20 Nov 2021 09:36:36 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-20T09:36:36.787Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ixd-studios:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-11-20T09:36:39.028Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 20 Nov 2021 09:36:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1328","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-20T09:36:39.030Z] > refreshing access token with scopes: []
+[debug] [2021-11-20T09:36:39.030Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-20T09:36:40.312Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sat, 20 Nov 2021 09:36:40 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-20T09:36:40.339Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ixd-studios [none]
+[debug] [2021-11-20T09:36:42.131Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ixd-studios 200
+[debug] [2021-11-20T09:36:42.132Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ixd-studios {"projectId":"ixd-studios","projectNumber":"386730929176","displayName":"ixd studios","name":"projects/ixd-studios","resources":{"hostingSite":"ixd-studios","storageBucket":"ixd-studios.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'ixd-studios'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-11-20T09:36:42.143Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-20T09:36:42.144Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-20T09:36:42.405Z] <<< HTTP RESPONSE 200 {"date":"Sat, 20 Nov 2021 09:36:42 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-20T09:36:42.418Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/ixd-studios/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
