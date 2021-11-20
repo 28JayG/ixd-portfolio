@@ -1,6 +1,11 @@
 .page-container {
   position: relative;
   min-height: 100vh;
+  transition: filter 200ms linear;
+
+  &.blur {
+    filter: blur(10px);
+  }
 
   .content-wrap {
     padding-bottom: 456px;

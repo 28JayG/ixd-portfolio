@@ -10,6 +10,10 @@
   padding: 30px 0;
   z-index: 9999;
 
+  @media screen and (max-width: 1024px) {
+    padding: 25px 0;
+  }
+
   .tn {
     display: flex;
     align-items: center;
@@ -19,6 +23,11 @@
     .brand-logo {
       width: 80px;
       height: 47px;
+
+      @media screen and (max-width: 1024px) {
+        width: 53px;
+        height: 30px;
+      }
 
       .img-logo {
         width: 100%;
@@ -42,13 +51,21 @@
         margin-right: 30px;
         transition: transform 200ms;
 
-        &:hover{
+        &:hover {
           transform: scale(1.03);
         }
 
         &:last-child {
           margin-right: 0;
         }
+      }
+    }
+
+    .tn-menu {
+      display: none;
+
+      @media screen and (max-width: 1024px) {
+        display: block;
       }
     }
   }

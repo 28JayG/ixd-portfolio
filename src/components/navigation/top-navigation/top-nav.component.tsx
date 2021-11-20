@@ -1,10 +1,15 @@
+import { IconMenu2 } from '@tabler/icons';
 import { Link } from 'react-router-dom';
+
 import ixdLogo from '../../../assets/ixd-logo.png';
 import { AppRoutes } from '../../../constants/routes';
+import { useNavContext } from '../../../providers/navigation/navigation.provider';
 
 import './top-nav.styles.scss';
 
 const TopNav = () => {
+  const { toggleSideNav } = useNavContext();
+
   return (
     <nav className='tn-wrapper'>
       <div className='tn'>
@@ -33,6 +38,7 @@ const TopNav = () => {
             <Link to={AppRoutes.CONTACT_US}>Contact Us</Link>
           </li>
         </ul>
+        <IconMenu2 className='tn-menu' onClick={toggleSideNav} color='white' size='24' />
       </div>
     </nav>
   );

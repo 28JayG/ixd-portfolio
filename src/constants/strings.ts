@@ -14,3 +14,5 @@ export const FOOTER_SERVICES_TEXT =
   'Design Thinking | Research |User Interface | Graphics / Illustrations | Development';
 
 export const SELECT_SERVICE_TEXT = 'Select Creative Work';
+
+export const DRAWER_TEXT = 'Can’t find what you’re looking for?'

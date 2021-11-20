@@ -72,18 +72,22 @@
     text-align: center;
     max-width: 650px;
     margin-bottom: 45px;
+
+    @media screen and (max-width: 1024px) {
+      width: 90%;
+    }
   }
 
-  .h-btn-row{
+  .h-btn-row {
     z-index: 1;
     display: flex;
 
-    @media screen and (max-width: 1024px){
+    @media screen and (max-width: 1024px) {
       flex-direction: column;
     }
 
-    .br-spacer{
-      width:20px;
+    .br-spacer {
+      width: 20px;
       height: 20px;
     }
   }
