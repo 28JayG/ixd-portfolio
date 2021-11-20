@@ -1,5 +1,4 @@
 import { ChangeEvent, FC, FormEvent, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import { AppRoutes } from '../../constants/routes';
 import { allServices } from '../../constants/services';
@@ -7,6 +6,7 @@ import { CONTACT_US_TEXT } from '../../constants/strings';
 import { isChoiceSelected } from '../../utils/utils';
 import { ServiceModal } from '../../modals/service.modal';
 import { FirebaseFunctions } from '../../firebase/firebase-functions.utils';
+import { notify } from '../../utils/toasts.utils';
 
 import Choice from './choice/choice.component';
 import FormInput from './form-input/form-input.component';
@@ -42,8 +42,14 @@ const ContactUsForm: FC = () => {
     setLoading(true);
     try {
       await FirebaseFunctions.sendEnquiryEmail(mailData);
+      //reset the data
+      const form = document.getElementById('cuf') as HTMLFormElement;
+      form.reset();
+      //notify user for success
+      notify('Message was sent successfully', 'success');
     } catch (error) {
       console.error(error);
+      notify('Message was sent failed, lets try again.', 'error');
     } finally {
       setLoading(false);
     }
@@ -72,7 +78,7 @@ const ContactUsForm: FC = () => {
 
   return (
     <div className={`cu-form ${loading ? 'disabled' : ''}`}>
-      <form onSubmit={handleSubmit}>
+      <form id='cuf' onSubmit={handleSubmit}>
         <h5 className='cuf-heading'>Let’s Talk</h5>
         <p className='cuf-text'>{CONTACT_US_TEXT}</p>
 

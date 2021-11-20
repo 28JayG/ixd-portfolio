@@ -1,6 +1,8 @@
 import { Route, Switch } from 'react-router';
+import { ToastContainer } from 'react-toastify';
 
 import { AppRoutes } from './constants/routes';
+import { toastContainerConfig } from './utils/toasts.utils';
 
 import HomePage from './pages/homepage/homepage.component';
 import Footer from './components/footer/footer.component';
@@ -9,6 +11,7 @@ import ContactUs from './pages/contact-us/contact-us.component';
 import ScrollToTop from './components/shared/scrol-to-top/scroll-to-top.component';
 
 import './App.scss';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -24,6 +27,7 @@ function App() {
         </div>
         <Footer />
       </div>
+      <ToastContainer {...toastContainerConfig} />
     </>
   );
 }
