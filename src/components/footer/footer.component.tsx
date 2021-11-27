@@ -1,5 +1,7 @@
 import {
   COMPANY_DESCRIPTION,
+  COMPANY_EMAIL,
+  COMPANY_PHONE_NO,
   FOOTER_SERVICES_TEXT,
 } from '../../constants/strings';
 import ixdLogoBlue from '../../assets/ixd-logo-blue.png';
@@ -44,14 +46,11 @@ const Footer = () => (
           <h6 className='ftr-list-head'>Contact Us</h6>
           <ul className='ftr-list ftr-contact'>
             <li>
-              <a
-                className='contact'
-                href='mailto:interactiondesignstudio@gmail.com'
-              >
+              <a className='contact' href={`mailto:${COMPANY_EMAIL}`}>
                 <span className='icon'>
                   <IconMail stroke={1} />{' '}
                 </span>
-                interactiondesignstudio@gmail.com
+                {COMPANY_EMAIL}
               </a>
             </li>
             <li>
@@ -59,7 +58,7 @@ const Footer = () => (
                 <span className='icon'>
                   <IconPhoneCall stroke={1} />
                 </span>{' '}
-                +91 89866 30684
+                {COMPANY_PHONE_NO}
               </a>
             </li>
           </ul>

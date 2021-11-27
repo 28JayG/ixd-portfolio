@@ -15,4 +15,7 @@ export const FOOTER_SERVICES_TEXT =
 
 export const SELECT_SERVICE_TEXT = 'Select Creative Work';
 
-export const DRAWER_TEXT = 'Can’t find what you’re looking for?'
+export const DRAWER_TEXT = 'Can’t find what you’re looking for?';
+
+export const COMPANY_EMAIL = 'hello@ixdstudios.design';
+export const COMPANY_PHONE_NO = '+91 89866 30684';
