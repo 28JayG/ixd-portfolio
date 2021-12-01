@@ -11,6 +11,7 @@ import TopNav from './components/navigation/top-navigation/top-nav.component';
 import ContactUs from './pages/contact-us/contact-us.component';
 import ScrollToTop from './components/shared/scrol-to-top/scroll-to-top.component';
 import DrawerNav from './components/navigation/drawer-nav/drawer-nav.componnet';
+import ScrollToTopButton from './components/shared/scroll-to-top-button/scroll-to-top-button.component';
 
 import './App.scss';
 import 'react-toastify/dist/ReactToastify.css';
@@ -32,6 +33,7 @@ function App() {
         <Footer />
       </div>
       <DrawerNav />
+      <ScrollToTopButton />
       <ToastContainer {...toastContainerConfig} />
     </>
   );
