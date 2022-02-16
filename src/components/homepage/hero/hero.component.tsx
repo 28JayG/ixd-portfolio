@@ -29,7 +29,11 @@ const Hero = () => (
     <p className='hero-description'>{COMPANY_DESCRIPTION}</p>
 
     <div className='h-btn-row'>
-      <CustomButton buttonType='secondary'>See Our Portfolio</CustomButton>
+      <CustomButton buttonType='secondary'>
+        <a href={`${AppRoutes.HOME}${AppRoutes.PORTFOLIO_SECTION}`}>
+          See Our Portfolio
+        </a>
+      </CustomButton>
       <div className='br-spacer'></div>
       <Link to={AppRoutes.CONTACT_US}>
         <CustomButton>Become our client</CustomButton>
