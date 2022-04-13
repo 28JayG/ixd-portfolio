@@ -11,8 +11,8 @@ export const ExternalLinks = {
 };
 
 export const CompanySocials = {
-  IXD_WHATSAPP: '',
-  IXD_INSTAGRAM: '',
-  IXD_BEHANCE: '',
+  IXD_DRIBBBLE: 'https://www.instagram.com/ixd_studios',
+  IXD_INSTAGRAM: 'https://www.behance.net/ixdstudios',
+  IXD_BEHANCE: 'https://www.dribbble.com/IxD_studios',
   IXD_FACEBOOK: '',
 };

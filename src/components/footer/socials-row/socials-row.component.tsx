@@ -1,8 +1,8 @@
 import {
-  IconBrandWhatsapp,
   IconBrandInstagram,
   IconBrandBehance,
   IconBrandFacebook,
+  IconBrandDribbble
 } from '@tabler/icons';
 
 import { CompanySocials } from '../../../constants/routes';
@@ -17,17 +17,17 @@ const SocialsRow = () => (
       </div>
       <span className='fs-text'>Instagram</span>
     </a>
-    <a href={CompanySocials.IXD_FACEBOOK} className='ftr-social'>
+    {/* <a href={CompanySocials.IXD_FACEBOOK} className='ftr-social'>
       <div className='fs-icon'>
         <IconBrandFacebook stroke={1} />
       </div>
       <span className='fs-text'>facebook</span>
-    </a>
-    <a href={CompanySocials.IXD_WHATSAPP} className='ftr-social'>
+    </a> */}
+    <a href={CompanySocials.IXD_DRIBBBLE} className='ftr-social'>
       <div className='fs-icon'>
-        <IconBrandWhatsapp stroke={1} />
+        <IconBrandDribbble stroke={1} />
       </div>
-      <span className='fs-text'>whatsapp</span>
+      <span className='fs-text'>dribble</span>
     </a>
     <a href={CompanySocials.IXD_BEHANCE} className='ftr-social'>
       <div className='fs-icon'>
